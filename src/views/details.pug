@@ -1,0 +1,28 @@
+html
+include includes/head.pug
+body
+    include includes/header.pug
+
+    div.container-fluid
+        div.row.justify-content-center.align-items-center.min-vh-100
+            div.col-3.text-center
+                h4.mb-3 Estos son tus logros
+
+                each logro, index in user.logros
+                    div.card.shadow.mb-2
+                        div.card-body.p-2
+                            ul.custom-numbers.list-unstyled
+                                li.mb-2.text-center
+                                    span.number(style="font-size: 1.5em; color: red; margin-right: 1em; margin-left: 0em; display: flex; justify-content: center")= index + 1
+                                    span= logro.title
+
+
+
+
+
+
+
+
+
+
+
